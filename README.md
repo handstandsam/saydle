@@ -1,5 +1,5 @@
 # Saydle - "Say Gradle"
-Saydle is a Wrapper for the Gradle Wrapper that notifies you via the OSX [`say`](https://ss64.com/osx/say.html) command whether a task failed or succeded.
+Saydle is a Wrapper for the Gradle Wrapper that notifies you via the OSX [`say`](https://ss64.com/osx/say.html) command whether a task failed or succeeded.
 
 # Why?
 Knowing when a Gradle build is done is super helpful when there are long running tasks.  This allows you to be notified instead of checking the terminal.
@@ -26,7 +26,7 @@ This will download the [`saydlew`](https://github.com/handstandsam/saydle/blob/m
 * failed_phrase="Failed"
 * voice="Alex"
 
-## Aternate Voices for the "say" Command
+## Alternate Voices for the "say" Command
 [OSX Say Command Documentation](https://ss64.com/osx/say.html)
 
 **Available English Speaking Voices**
