@@ -10,7 +10,12 @@ Knowing when a Gradle build is done is super helpful when there are long running
 * You must be Running Mac OSX
 
 # Installation Instructions
-* Download the [`saydlew`](https://github.com/handstandsam/saydle/blob/main/saydlew) file and put it next to your `gradlew` file in the root of your Gradle project.
+Run the following command from the terminal in the root of your Android Project (where the `gradlew` file is)
+```
+curl -O "https://raw.githubusercontent.com/handstandsam/saydle/main/saydlew" && chmod +x saydlew
+```
+
+This will download the [`saydlew`](https://github.com/handstandsam/saydle/blob/main/saydlew) file and put it next to your `gradlew` file in the root of your Gradle project. It then ensures there is permission to execute the file.
 
 # Usage
 * Instead of using `./gradlew`, use `./saydlew` instead.  That's it!
