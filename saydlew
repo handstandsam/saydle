@@ -1,22 +1,19 @@
 #!/usr/bin/env sh
 # License: Apache 2.0
 # Source: https://github.com/handstandsam/saydle/
-# Version: 1.0.0-alpha01
+# Version: 1.0.0-alpha02
 
 # Customizations
 success_phrase="Success"
 failed_phrase="Failed"
 voice="Alex"
 
-# Script
-orig_gradew_args="" # Will store all the arguments sent to ./saydlew
+# Saydle Script
+pullargs () {
+    for i do printf %s "$i " ; done
+}
+orig_gradew_args=$(pullargs "$@") # Will store all the arguments sent to ./saydlew
 
-# Loop through all the arguments sent to ./saydlew to keep them
-for var in "$@"; do
-    if [[ $var > 1 ]]; then
-        orig_gradew_args+="$var "
-    fi
-done
 gradlew_cmd="./gradlew $orig_gradew_args"              # Gradlew Command
 success_cmd="say -v $voice \"$success_phrase\""        # On Success
 failed_cmd="say -v $voice \"$failed_phrase\""          # On Failure
