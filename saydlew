@@ -6,7 +6,8 @@
 # Customizations
 success_phrase="Success"
 failed_phrase="Failed"
-voice="Alex"
+success_voice="Good News"
+failed_voice="Bad News"
 
 # Saydle Script
 pullargs () {
@@ -15,8 +16,8 @@ pullargs () {
 orig_gradew_args=$(pullargs "$@") # Will store all the arguments sent to ./saydlew
 
 gradlew_cmd="./gradlew $orig_gradew_args"              # Gradlew Command
-success_cmd="say -v $voice \"$success_phrase\""        # On Success
-failed_cmd="say -v $voice \"$failed_phrase\""          # On Failure
+success_cmd="say -v $success_voice \"$success_phrase\""        # On Success
+failed_cmd="say -v $failed_voice \"$failed_phrase\""          # On Failure
 full_cmd="$gradlew_cmd && $success_cmd || $failed_cmd" # Command to Execute
 
 echo "Executing: $gradlew_cmd"
